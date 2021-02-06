@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "7067ff85-d379-47a5-8e93-3a1817c0967e",
+		"name": "Alexander Rol - Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Karsten\",\r\n    \"lastname\": \"Jodel\",\r\n    \"country\": \"Denmark\",\r\n    \"postalCode\": \"2400\",\r\n    \"phoneNumber\": \"65498721\",\r\n    \"email\": \"cph@denmark.dk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":62,\r\n    \"firstName\": \"Karsten\",\r\n    \"lastname\": \"Jensen\",\r\n    \"country\": \"Denmark\",\r\n    \"postalCode\": \"3200\",\r\n    \"phoneNumber\": \"65498721\",\r\n    \"email\": \"cph@denmark.dk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers sorted by Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customercountry",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customercountry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Biggest Spenders Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/bigspender",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bigspender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Most Popular Genre (Enter CustomerId)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/customergenre?userId=12",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customergenre"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

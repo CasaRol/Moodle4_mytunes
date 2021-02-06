@@ -1,0 +1,2 @@
+FROM openjdk:15
+ADD target/mytunes.0.0.1-SNAPSHOT.jar mytunes.jar
