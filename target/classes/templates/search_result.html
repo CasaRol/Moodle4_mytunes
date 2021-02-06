@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+<head>
+
+</head>
+<body>
+<h1 th:inline="text">Result of search "[[${result.getSearchTerm}]]":</h1>
+
+<table style="width: 50%">
+<tr style="text-align: center; font-weight: bold;">
+    <td>Song Name</td>
+    <td>Artist</td>
+    <td>Album</td>
+    <td>Genre</td>
+</tr>
+<tr style="text-align: center;">
+    <td th:text="${result.getTrackName}"></td>
+    <td th:text="${result.getArtist}"}></td>
+    <td th:text="${result.getAlbum}"}></td>
+    <td th:text="${result.getGenre}"}></td>
+</tr>
+</table>
+</body>

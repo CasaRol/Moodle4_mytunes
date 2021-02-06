@@ -1,2 +1,5 @@
 FROM openjdk:15
-ADD target/mytunes.0.0.1-SNAPSHOT.jar mytunes.jar
+RUN git clone https://github.com/CasaRol/Moodle4_mytunes /mytunes/
+ADD /mytunes/target/mytunes-0.0.1-SNAPSHOT.jar mytunes.jar
+ENTRYPOINT ["java", "-jar", "mytunes.jar"]
+

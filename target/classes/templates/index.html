@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+<head>
+    <title>myTunes</title>
+<h1>Welcome to myTunes!</h1>
+</head>
+
+<body>
+    <form th:action="@{/search_song}" method="GET">
+        <label for="search"><b>Search for a specific song:</b></label>
+        <input id="search" type="text" th:value="${searchTerm}" name="searchTerm" required>
+        <input type="submit"/>
+    </form>
+    <div>
+        <p><b>5 Random Artists</b></p>
+        <ul th:each="art: ${artists}">
+            <li th:text="${art}"></li>
+        </ul>
+    </div>
+    <div>
+        <p><b>5 Random Songs</b></p>
+        <ul th:each="song: ${songs}">
+            <li th:text="${song}"></li>
+        </ul>
+    </div>
+    <div>
+        <p><b>5 Random Genres</b></p>
+        <ul th:each="gen: ${genres}">
+            <li th:text="${gen}"></li>
+        </ul>
+    </div>
+</body>
