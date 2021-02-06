@@ -26,7 +26,8 @@ public class SearchDataHandler {
                             "FROM Track\n" +
                             "JOIN Album ON Track.AlbumId=Album.AlbumId\n" +
                             "JOIN Genre ON Track.GenreId=Genre.GenreId\n" +
-                            "WHERE Track.Name=?");
+                            "WHERE Track.Name=?\n" +
+                            "COLLATE NOCASE");
 
             preparedStatement.setString(1, searchTerm);
 
