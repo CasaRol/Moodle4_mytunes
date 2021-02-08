@@ -33,7 +33,6 @@ public class ViewControl {
             return "Error404";
         }
         model.addAttribute("result", searchResults.get(0));
-        //model.addAttribute("result", search);
         return "search_result";
 
     }
